@@ -4,7 +4,7 @@ Install the OVA file, and launch Virtual Box
 In Virtual Box, you should have an option called as Import.
 After clicking on the **"Import"** button, it should open another window that will ask for the path to the OVA file.
 
-![Instruction Image](./images/Untitled\ design.png)
+![Instruction Image](./images/import.png)
 
 Guide VirtualBox to wherever you have saved the OVA file, and it should be imported into Virtual Box.
 
