@@ -16,23 +16,23 @@ A suspect has been accused of traveling to Dubai for arms deals. The subject den
 
 ### Loading the Evidence
 On launching Autopsy, this is the screen that greets us. Let's start a new case by clicking on the **`New Case`** button.
-![[Autopsy_Open.png]]
+![Autopsy_Open.png](./Autopsy_Open.png)
 
 We will now be prompted to enter the Case Name and the Base Directory. The Case Name is how we will identify the Case, and the Base Directory is where the Case Information will be stored.
 
 I've created a Case with the name **`USB`** and in the path **`E:\`**
 
-![[Data_Source.png]]
+![Data_Source.png](./Data_Source.png)
 
 When we make he case, it will ask what kind of Data Source we are using. The most common kind of data source is the Disk Image, because they are the Forensic Images of Hard Disks or Storage Devices. Click on **`Disk Image or VM File`** and load the Encase File into Autopsy.
 
-![[Data_Source_Conti.png]]
+![Data_Source_Conti.png](./Data_Source_Conti.png)
 I've loaded the Encase File and can move on to the next step. In the next step, Configure Ingest, make sure to leave the checkboxes on the default values. After configuring this, Autopsy will load the image into the local database, and now we can start going through the image as though it was a normal computer.
 
 ### Starting the Investigation
 Since we know that the suspect has been accused of traveling to Dubai and dealing arms, let's go through the files to see if he has been looking to travel to Dubai or any files that prove that he's dealing in arms.
 
-![[File_Structure.png]]
+![File_Structure.png](./File_Structure.png)
 
 On expanding the first tab, we see that there are some Carved Files, Unallocated Memory, System Volume Information, Tools and Travel.
 
@@ -46,8 +46,8 @@ In this tools folder we see that there are 3 images and 2 folders. We do not hav
 
 The remaining three files are image files of **`jpg`** format and they have some weird names. On selecting a particular image we see its preview in the `Applications` tab, some strings that are present in the image in the `Strings` tab and the metadata of the file in the `File Metadata` tab.
 
-![[Facebook_Post.png]]
-![[Flexing.png]]
+![Facebook_Post.png](./Facebook_Post.png)
+![Flexing.png](./Flexing.png)
 We notice that there are pictures of various arms present in this particular folder, so we know that there is a link to the suspect and arms.
 
 Now we need to prove that the suspect is going to Dubai in order to trade arms. Let's look into other folders.
@@ -55,7 +55,7 @@ Now we need to prove that the suspect is going to Dubai in order to trade arms. 
 #### Travel Folder
 This folder is also a deleted folder with many images within it along with **`.`** and **`..`** as well. There are 4 images in this folder and each one is named with a particular reference to Dubai.
 
-![[Map.png]]
+![Map.png](./Map.png)
 
 With all of this evidence, showing that the suspect is both an arms dealer and has an interest in traveling to Dubai, we can safely conclude that the suspect is guilty of wanting to trade arms in Dubai.
 
