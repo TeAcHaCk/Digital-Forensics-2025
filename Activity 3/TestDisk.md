@@ -38,24 +38,18 @@ To start `TestDisk`, open a terminal and run
 sudo testdisk
 ```
 
-Since we're working with `.E01` files here, we have to load the E01 file within TestDisk. Unfortunately, TestDisk does not support E01 file format, and so we need to load the E01 file as a `dd` file.
+Since we're working with `.E01` files here, we have to load the E01 file within TestDisk. Unfortunately, TestDisk does not support E01 file format, and so we need to mount the E01 file as a loopback device.
 
 ```shell
-sudo apt install libewf-tools # Debian-based
-sudo pacman -S libewf # Arch-based
+sudo mkdir -p /mnt/efw
+sudo losetup -fP --show /mnt/efw # This will return a loopback device ID, use that in the next command
+sudo testdisk /dev/loopX
 ```
 
-Libewf will allow us to convert the `.E01` file into a `.dd` file and mount it
-
+To remove the loopback device once we are done, you can do this
 ```shell
-sudo mkdir /mnt/ewf
-ewfmount /path/to/E01 /mnt/ewf
-sudo testdisk /mnt/ewf
-```
-
-Once you are done with the analysis, unmount the image by running
-```shell
-sudo umount /mnt/ewf
+sudo losetup -a # This lists all the loopback devices
+sudo losetup -d /dev/loopX # Make sure you remove the right loopback device
 ```
 
 TestDisk needs administrator privileges to access the storage devices, so we run the application with `sudo`
