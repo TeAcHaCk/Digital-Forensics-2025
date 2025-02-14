@@ -16,4 +16,4 @@ Linux users and M1 users can install the tool TestDisk. Choose your operating sy
 
 To learn how to use Recuva, click [here](./Recuva_Tool_Guide.pdf)
 To learn how to use PhotoRec, click [here](./PhotoRec_Tool_Guide.pdf)
-To get started with TestDisk, click [here]()
+To get started with TestDisk, click [here](./TestDisk.md)

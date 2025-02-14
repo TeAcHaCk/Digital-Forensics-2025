@@ -42,7 +42,7 @@ Since we're working with `.E01` files here, we have to load the E01 file within 
 
 ```shell
 sudo mkdir -p /mnt/efw
-sudo losetup -fP --show /mnt/efw # This will return a loopback device ID, use that in the next command
+sudo losetup -fP --show /mnt/efw/efw1 # This will return a loopback device ID, use that in the next command
 sudo testdisk /dev/loopX
 ```
 
