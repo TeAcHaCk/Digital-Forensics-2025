@@ -38,6 +38,11 @@ To start `TestDisk`, open a terminal and run
 sudo testdisk
 ```
 
+Since we're working with `.E01` files here, we have to load the E01 file within TestDisk. We do that by running the command
+```shell
+sudo testdisk Image.E01
+```
+
 TestDisk needs administrator privileges to access the storage devices, so we run the application with `sudo`
 
 ## Recovering a Lost Partition with TestDisk  
