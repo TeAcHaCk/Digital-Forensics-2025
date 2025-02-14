@@ -38,9 +38,24 @@ To start `TestDisk`, open a terminal and run
 sudo testdisk
 ```
 
-Since we're working with `.E01` files here, we have to load the E01 file within TestDisk. We do that by running the command
+Since we're working with `.E01` files here, we have to load the E01 file within TestDisk. Unfortunately, TestDisk does not support E01 file format, and so we need to load the E01 file as a `dd` file.
+
 ```shell
-sudo testdisk Image.E01
+sudo apt install libewf-tools # Debian-based
+sudo pacman -S libewf # Arch-based
+```
+
+Libewf will allow us to convert the `.E01` file into a `.dd` file and mount it
+
+```shell
+sudo mkdir /mnt/ewf
+ewfmount /path/to/E01 /mnt/ewf
+sudo testdisk /mnt/ewf
+```
+
+Once you are done with the analysis, unmount the image by running
+```shell
+sudo umount /mnt/ewf
 ```
 
 TestDisk needs administrator privileges to access the storage devices, so we run the application with `sudo`
